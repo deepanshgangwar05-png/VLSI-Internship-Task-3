@@ -61,3 +61,24 @@ end
 
 endmodule
 ```
+## 3. 4-Bit Register
+### Theory
+A register is a collection of flip-flops used to store multiple bits of data.
+| Clock Edge | Input D[3:0] | Output Q[3:0] |
+|------------|--------------|---------------|
+|  ↑         | Data Input   | Stored Data   |
+### Verilog Code
+```verilog
+module register4(
+    input clk,
+    input [3:0] d,
+    output reg [3:0] q
+);
+
+always @(posedge clk)
+begin
+    q <= d;
+end
+
+endmodule
+```
