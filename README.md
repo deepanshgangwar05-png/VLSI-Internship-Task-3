@@ -10,7 +10,7 @@ The objective of this task is to design and simulate basic sequential circuits u
 - GTKWave
 - GitHu
 ## 1. D Flip-Flop
-## Theory
+### Theory
 A D Flip-Flop stores one bit of data. On every positive edge of the clock signal, the output Q follows the input D.
 | Clock Edge | D | Q(next) |
 |------------|---|---------|
@@ -27,6 +27,36 @@ module d_ff(
 always @(posedge clk)
 begin
     q <= d;
+end
+
+endmodule
+```
+## 2. JK Flip-Flop
+### Theory
+JK Flip-Flop removes the invalid state of SR Flip-Flop and can hold, set, reset, or toggle the output.
+| J | K |  Q(next)  |
+|---|---|-----------|
+| 0 | 0 | No Change |
+| 0 | 1 | Reset     |
+| 1 | 0 | Set       |
+| 1 | 1 | Toggle    |
+### Verilog Code
+```verilog
+module jk_ff(
+    input clk,
+    input j,
+    input k,
+    output reg q
+);
+
+always @(posedge clk)
+begin
+    case({j,k})
+        2'b00: q <= q;
+        2'b01: q <= 0;
+        2'b10: q <= 1;
+        2'b11: q <= ~q;
+    endcase
 end
 
 endmodule
