@@ -31,6 +31,9 @@ end
 
 endmodule
 ```
+## Output Waveform
+<img width="1364" height="732" alt="IMG_20260710_111427 jpg" src="https://github.com/user-attachments/assets/1381e383-7031-451e-b47c-8e88932038ba" />
+
 ## 2. JK Flip-Flop
 ### Theory
 JK Flip-Flop removes the invalid state of SR Flip-Flop and can hold, set, reset, or toggle the output.
@@ -61,6 +64,9 @@ end
 
 endmodule
 ```
+## Output Waveform
+<img width="1364" height="732" alt="IMG_20260710_111747 jpg" src="https://github.com/user-attachments/assets/d041c5f9-bae5-4981-bb0f-2e191f0b7ef4" />
+
 ## 3. 4-Bit Register
 ### Theory
 A register is a collection of flip-flops used to store multiple bits of data.
@@ -82,3 +88,44 @@ end
 
 endmodule
 ```
+## Output Waveform
+<img width="1364" height="728" alt="IMG_20260710_112307 jpg" src="https://github.com/user-attachments/assets/48772f8b-c9d0-4cf0-94f6-27d7f3de680d" />
+
+## 4. 4-Bit Up Counter
+### Theory
+A counter changes its state on every clock pulse. A 4-bit up counter counts from 0000 to 1111.
+### Count Sequence 
+| Clock Pulse | Count |
+|-------------|-------|
+| 0           | 0000  |
+| 1           | 0001  |
+| 2           | 0010  |
+| 3           | 0011  |
+| 4           | 0100  |
+| ---         | ---   |
+| 15          | 1111  |
+### Verilog Code 
+```verilog
+module up_counter(
+    input clk,
+    output reg [3:0] count
+);
+
+initial
+begin
+    count = 4'b0000;
+end
+
+always @(posedge clk)
+begin
+    count <= count + 1;
+end
+
+endmodule
+```
+### Output Waveform
+
+<img width="1364" height="724" alt="IMG_20260710_113705 jpg" src="https://github.com/user-attachments/assets/4e3f3e76-65e3-4ab4-9335-3e56113c48d0" />
+
+
+
