@@ -127,5 +127,37 @@ endmodule
 
 <img width="1364" height="724" alt="IMG_20260710_113705 jpg" src="https://github.com/user-attachments/assets/4e3f3e76-65e3-4ab4-9335-3e56113c48d0" />
 
+## Testbench Verification
+Each sequential circuit was verified using a dedicated Verilog testbench. Clock signals and input patterns were generated to validate circuit functionality.
+
+### Verification Steps
+1. Write RTL design code.
+2. Create testbench module.
+3. Generate clock signal.
+4. Apply test inputs.
+5. Run simulation.
+6. Observe waveform output.
+7. Verify expected behavior.
+## Result
+All circuits were successfully designed, simulated, and verified.
+
+✅ D Flip-Flop
+
+✅ JK Flip-Flop
+
+✅ 4-Bit Register
+
+✅ 4-Bit Up Counter
+
+✅ Testbench Verification
+
+✅ Waveform Analysis
+
+## Conclusion
+This project provided hands-on experience in designing and simulating sequential circuits using Verilog HDL. The implementation of Flip-Flops, Registers, and Counters improved understanding of clock-driven digital systems, RTL coding, and verification methodologies.
+
+## Author
+DEEPANSH GANGWAR
+
 
 
